@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Entity /* Marca esta clase como una entidad JPA */
 @Table(name = "Jojos") /* Especifica el nombre de la tabla en la base de datos */
 
-public class Jojos {
+public class Personajes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

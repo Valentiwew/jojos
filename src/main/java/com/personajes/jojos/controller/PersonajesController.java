@@ -1,8 +1,8 @@
 package com.personajes.jojos.controller;
 
 /* Importamos las clases (model - service) */
-import com.personajes.jojos.model.Jojos;
-import com.personajes.jojos.service.JojosService;
+import com.personajes.jojos.model.Personajes;
+import com.personajes.jojos.service.PersonajesService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,31 +10,31 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/Jojos")
-public class JojosController {
+public class PersonajesController {
 
-    private final JojosService service;
+    private final PersonajesService service;
 
-    public JojosController(JojosService service) {
+    public PersonajesController(PersonajesService service) {
         this.service = service;
     }
 
     @GetMapping
-    public List<Jojos> getAll() {
+    public List<Personajes> getAll() {
         return service.getAllPersonajes();
     }
 
     @PostMapping
-    public Jojos save(@RequestBody Jojos jojos) {
+    public Personajes save(@RequestBody Personajes jojos) {
         return service.savePersonaje(jojos);
     }
 
     @GetMapping("/{id}")
-    public Optional<Jojos> getById(@PathVariable int id) {
+    public Optional<Personajes> getById(@PathVariable int id) {
         return service.getPersonajeById(id);
     }
 
     @PutMapping("/{id}")
-    public Optional<Jojos> update(@PathVariable int id, @RequestBody Jojos jojos) {
+    public Optional<Personajes> update(@PathVariable int id, @RequestBody Personajes jojos) {
         return service.updatePersonaje(id, jojos);
     }
 
