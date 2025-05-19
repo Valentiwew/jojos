@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor /* Genera un constructor con un argumento por cada campo en la clase */
 @NoArgsConstructor /* Genera un constructor sin argumentos */
 @Entity /* Marca esta clase como una entidad JPA */
-@Table(name = "Jojos") /* Especifica el nombre de la tabla en la base de datos */
+@Table(name = "PersonajesJojos") /* Especifica el nombre de la tabla en la base de datos */
 
 public class Personajes {
     @Id
